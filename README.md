@@ -3,10 +3,28 @@
 ## 环境配置
 
 - Python >= 3.10
-- [requirements.txt](./requirements.txt)
+- 安装依赖：[requirements.txt](./requirements.txt)
+- 修改配置：[config.ini](./config.ini)
 
-## 用户配置
-- [config.ini](./config.ini)
+## 项目结构
+```
+/MemChain
+└── llm
+    └── llm_api.py    # API 调用 LLM
+└── routers
+    └── diaries.py    # 日记相关路由
+└── utils
+    ├── config_load.py    # 从配置文件中加载数据
+    └── project_path.py    # 定位项目根目录，即 MemChain 文件夹
+├── config.ini    # 配置文件
+├── database.py    # 数据库配置
+├── diaries.db    # SQLite 数据库
+├── main.py    # APP 入口
+├── models.py    # ORM 定义数据模型
+├── README.md    # 说明文档
+├── requirements.txt    # 依赖需求
+└── schemas.py    # Pydantic 模型
+```
 
 ## 启动项目
 ```shell

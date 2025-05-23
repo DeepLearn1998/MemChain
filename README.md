@@ -32,6 +32,7 @@
 ## 启动项目
 ```shell
 conda create -n MemChainEnv python=3.10
+conda activate MemChainEnv
 cd path/to/MemChain
 pip install -r requirements.txt
 python main.py

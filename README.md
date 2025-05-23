@@ -1,4 +1,6 @@
 # MemChain
+人生博物馆（MemChain）旨在为用户提供一款有温度的日记APP
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 
 ## 环境配置
 

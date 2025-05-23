@@ -9,13 +9,13 @@
 ## 项目结构
 ```
 /MemChain
-└── llm
-    └── llm_api.py    # API 调用 LLM
-└── routers
-    └── diaries.py    # 日记相关路由
-└── utils
-    ├── config_load.py    # 从配置文件中加载数据
-    └── project_path.py    # 定位项目根目录，即 MemChain 文件夹
+├── llm
+|   └── llm_api.py    # API 调用 LLM
+├── routers
+|   └── diaries.py    # 日记相关路由
+├── utils
+|   ├── config_load.py    # 从配置文件中加载数据
+|   └── project_path.py    # 定位项目根目录，即 MemChain 文件夹
 ├── config.ini    # 配置文件
 ├── database.py    # 数据库配置
 ├── diaries.db    # SQLite 数据库

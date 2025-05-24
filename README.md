@@ -46,7 +46,7 @@ API 详情：[API 文档](http://127.0.0.1:8000/docs)
 ## 开发日志
 - [x] 数据库设计：[models.py](./models.py)
 - [x] 日记的增删改查 API：[diaries.py](./routers/diaries.py)
-- [x] 日记的交互网页：[webPage.py](./webPage.py)
+- [x] 面向用户的日记交互网页：[webPage.py](./webPage.py)
 - [ ] 智能分析引擎：解析用户日记，生成并存储知识图谱
 - [ ] 日记管理：标签的增删改查 API（是否需要增设一张标签表？）
 - [ ] 日记时间轴展示

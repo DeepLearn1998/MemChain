@@ -26,7 +26,8 @@
 ├── models.py    # ORM 定义数据模型
 ├── README.md    # 说明文档
 ├── requirements.txt    # 依赖需求
-└── schemas.py    # Pydantic 模型
+├── schemas.py    # Pydantic 模型
+└── webPage.py    # 可交互网页
 ```
 
 ## 启动项目
@@ -36,12 +37,15 @@ conda activate MemChainEnv
 cd path/to/MemChain
 pip install -r requirements.txt
 python main.py
+python webPage.py
 ```
-浏览器访问：[API 文档](http://127.0.0.1:8000/docs)
+API 文档详见：[API 文档](http://127.0.0.1:8000/docs)
+用户界面：[可交互网页](http://127.0.0.1:7860)
 
 ## 开发日志
 - [x] 数据库设计：[models.py](./models.py)
 - [x] 日记的增删改查 API：[diaries.py](./routers/diaries.py)
+- [x] 日记的交互网页：[webPage.py](./webPage.py)
 - [ ] 智能分析引擎：解析用户日记，生成并存储知识图谱
 - [ ] 日记管理：标签的增删改查 API（是否需要增设一张标签表？）
 - [ ] 日记时间轴展示

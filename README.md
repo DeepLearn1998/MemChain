@@ -39,7 +39,8 @@ pip install -r requirements.txt
 python main.py
 python webPage.py
 ```
-API 文档详见：[API 文档](http://127.0.0.1:8000/docs)
+API 详情：[API 文档](http://127.0.0.1:8000/docs)
+
 用户界面：[可交互网页](http://127.0.0.1:7860)
 
 ## 开发日志

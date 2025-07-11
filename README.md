@@ -3,50 +3,53 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
 
-## 环境配置
+## 环境安装
 
-- Python >= 3.10
-- 安装依赖：[requirements.txt](./requirements.txt)
-- 修改配置：[config.ini](./config.ini)
+1. 基础环境：Python3.10+
 
-## 项目结构
+2. 安装UV
+```shell
+pip install uv
+set UV_INDEX=https://mirrors.aliyun.com/pypi/simple
 ```
-/MemChain
-├── llm
-|   └── llm_api.py    # API 调用 LLM
-├── routers
-|   └── diaries.py    # 日记相关路由
-├── utils
-|   ├── config_load.py    # 从配置文件中加载数据
-|   └── project_path.py    # 定位项目根目录，即 MemChain 文件夹
-├── config.ini    # 配置文件
-├── database.py    # 数据库配置
-├── diaries.db    # SQLite 数据库
-├── main.py    # APP 入口
-├── models.py    # ORM 定义数据模型
-├── README.md    # 说明文档
-├── requirements.txt    # 依赖需求
-├── schemas.py    # Pydantic 模型
-└── webPage.py    # 可交互网页
+
+3. 安装Python依赖包
+```shell
+uv sync --python 3.10 --all-extras
+```
+
+4. 切换到本地环境(.venv)
+```shell
+cd .venv/Scripts
+activate
 ```
 
 ## 启动项目
-```shell
-conda create -n MemChainEnv python=3.10
-conda activate MemChainEnv
-cd path/to/MemChain
-pip install -r requirements.txt
-python main.py
-python webPage.py
-```
-API 详情：[API 文档](http://127.0.0.1:8000/docs)
+1. 在conf路径中，配置系统文件`config.ini`
 
-用户界面：[可交互网页](http://127.0.0.1:7860)
+```text
+[LLM]
+base_url = https://ark.cn-beijing.volces.com/api/v3
+api_key = your_api_key
+model_id = deepseek-r1-250120
+```
+
+2. 启动项目的前后端
+
+```shell
+python api/memchain_server.py
+python web/web_server.py
+```
+
+3. 访问项目：
+
+系统 API 详情访问地址：http://127.0.0.1:8000/docs
+用户界面访问地址：http://127.0.0.1:7860
 
 ## 开发日志
-- [x] 数据库设计：[models.py](./models.py)
-- [x] 日记的增删改查 API：[diaries.py](./routers/diaries.py)
-- [x] 面向用户的日记交互网页：[webPage.py](./webPage.py)
+- [x] 数据库设计：[models.py](./api/db/models.py)
+- [x] 日记的增删改查 API：[diaries_app.py](./api/apps/diaries_app.py)
+- [x] 面向用户的日记交互网页：[web_server.py](./web/web_server.py)
 - [ ] 智能分析引擎：解析用户日记，生成并存储知识图谱
 - [ ] 日记管理：标签的增删改查 API（是否需要增设一张标签表？）
 - [ ] 日记时间轴展示

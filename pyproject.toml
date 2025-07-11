@@ -1,0 +1,19 @@
+[project]
+name = "memchain"
+version = "0.1.0"
+description = "人生博物馆（MemChain）旨在为用户提供一款有温度的日记APP"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.116.0",
+    "gradio>=5.36.2",
+    "numpy>=2.2.6",
+    "openai>=1.95.0",
+    "pandas>=2.3.1",
+    "pip>=25.1.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.4",
+    "setuptools>=80.9.0",
+    "sqlalchemy>=2.0.41",
+    "wheel>=0.45.1",
+]
